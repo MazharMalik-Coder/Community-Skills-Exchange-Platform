@@ -1,3 +1,4 @@
+import Link from 'next/link'; // Ye line add karain
 export default function Hero() {
   return (
     <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-10 px-6 text-center rounded-xl shadow-lg mb-8">
@@ -12,14 +13,18 @@ export default function Hero() {
   </p>
   
   <div className="flex flex-col sm:flex-row justify-center gap-3">
-    {/* Buttons ki padding (px, py) aur font size kam kar di gayi hai */}
-    <button className="bg-white text-blue-700 px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition duration-300 shadow-md">
+  <Link href="/login">
+    <button className="bg-white text-blue-700 px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition shadow-md">
       Explore Skills
     </button>
-    <button className="bg-transparent border-2 border-white text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-blue-700 transition duration-300 shadow-md">
+  </Link>
+  
+  <Link href="/signup">
+    <button className="bg-transparent border-2 border-white text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-blue-700 transition shadow-md">
       Offer Your Skill
     </button>
-  </div>
+  </Link>
+</div>
 </section>
   );
 }
