@@ -130,14 +130,13 @@ export default function Home() {
 
         {/* Uske niche saare Skill Cards dikhenge */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <SkillCard title="Software Development" provider="Mazhar Malik" category="Programming" />
-          <SkillCard title="Next.js Development" provider="Ali Ahmed" category="Programming" />
-          <SkillCard title="Graphic Designing" provider="Sara Khan" category="Design" />
-          <SkillCard title="web development" provider="Saqib Ali" category="Design" />
-          <SkillCard title="digital marketing" provider="Mueen Khan" category="Language" />
-          <SkillCard title="Cybersecurity" provider="Shahzaib Malik" category="Language" />
-          {/* ... baki cards ... */}
-        </div>
+  <SkillCard id="1" title="Software Development" provider="Mazhar Malik" category="Programming" />
+  <SkillCard id="2" title="Next.js Development" provider="Ali Ahmed" category="Programming" />
+  <SkillCard id="3" title="Graphic Designing" provider="Sara Khan" category="Design" />
+  <SkillCard id="4" title="Web Development" provider="Saqib Ali" category="Design" />
+  <SkillCard id="5" title="Digital Marketing" provider="Mueen Khan" category="Language" />
+  <SkillCard id="6" title="Cybersecurity" provider="Shahzaib Malik" category="Language" />
+</div>
 
       </div>
     </main>

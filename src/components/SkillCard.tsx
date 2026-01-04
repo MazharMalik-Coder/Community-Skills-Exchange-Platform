@@ -1,23 +1,28 @@
+import Link from 'next/link';
+
 interface SkillProps {
+  id: string;
   title: string;
   provider: string;
   category: string;
 }
 
-export default function SkillCard({ title, provider, category }: SkillProps) {
+export default function SkillCard({ id, title, provider, category }: SkillProps) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition duration-300">
-      <div className="inline-block px-3 py-1 text-xs font-semibold text-blue-600 bg-blue-50 rounded-full mb-3">
-        {category}
-      </div>
-      <h3 className="text-xl font-bold text-gray-800 mb-1">{title}</h3>
-      <p className="text-gray-500 text-sm">By: <span className="font-medium text-gray-700">{provider}</span></p>
+    <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+      <span className="text-xs font-semibold text-blue-600 uppercase tracking-wide">{category}</span>
+      <h3 className="text-xl font-bold text-gray-900 mt-2">{title}</h3>
+      <p className="text-gray-600 text-sm mb-4">By {provider}</p>
       
-      <div className="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
-        <button className="text-blue-600 font-semibold hover:underline">
+      {/* Ye hai wo halki line (Border Top) */}
+      <div className="border-t border-gray-100 pt-4 mt-4 flex justify-between items-center">
+        {/* View Details Link */}
+        <Link href={`/skills/${id}`} className="text-blue-600 text-sm font-semibold hover:underline">
           View Details
-        </button>
-        <button className="bg-gray-800 text-white text-sm px-4 py-2 rounded-lg hover:bg-black">
+        </Link>
+
+        {/* Request Exchange Button */}
+        <button className="bg-blue-50 text-blue-600 px-4 py-2 rounded-lg text-xs font-bold hover:bg-blue-600 hover:text-white transition">
           Request Exchange
         </button>
       </div>
