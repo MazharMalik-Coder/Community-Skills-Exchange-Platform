@@ -106,40 +106,100 @@
 //   );
 // }
 
-import Hero from "@/components/Hero";
-import SearchBar from "@/components/SearchBar"; // Step 1: SearchBar ko import kiya
-import SkillCard from "@/components/SkillCard";
+// import Hero from "@/components/Hero";
+// import SearchBar from "@/components/SearchBar"; // Step 1: SearchBar ko import kiya
+// import SkillCard from "@/components/SkillCard";
+
+// export default function Home() {
+//   return (
+//     <main className="min-h-screen bg-gray-50 p-10">
+//       <div className="max-w-6xl mx-auto">
+        
+//         {/* Pehle Hero Section dikhega */}
+//         <Hero /> 
+
+//         {/* Phir uske bilkul niche Search Bar dikhega */}
+//         <SearchBar /> 
+
+//         <header className="mb-10 text-center">
+//           <h1 className="text-4xl font-extrabold text-gray-900 mb-2">
+//             Available Skills for Exchange
+//           </h1>
+//           <p className="text-gray-600">Explore skills and connect with the community.</p>
+//         </header>
+
+//         {/* Uske niche saare Skill Cards dikhenge */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+//           <SkillCard title="Software Development" provider="Mazhar Malik" category="Programming" />
+//           <SkillCard title="Next.js Development" provider="Ali Ahmed" category="Programming" />
+//           <SkillCard title="Graphic Designing" provider="Sara Khan" category="Design" />
+//           <SkillCard title="web development" provider="Saqib Ali" category="Design" />
+//           <SkillCard title="digital marketing" provider="Mueen Khan" category="Language" />
+//           <SkillCard title="Cybersecurity" provider="Shahzaib Malik" category="Language" />
+//           {/* ... baki cards ... */}
+//         </div>
+
+//       </div>
+//     </main>
+//   );
+// }
+import React from 'react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50 p-10">
-      <div className="max-w-6xl mx-auto">
-        
-        {/* Pehle Hero Section dikhega */}
-        <Hero /> 
-
-        {/* Phir uske bilkul niche Search Bar dikhega */}
-        <SearchBar /> 
-
-        <header className="mb-10 text-center">
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-2">
-            Available Skills for Exchange
-          </h1>
-          <p className="text-gray-600">Explore skills and connect with the community.</p>
-        </header>
-
-        {/* Uske niche saare Skill Cards dikhenge */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <SkillCard title="Software Development" provider="Mazhar Malik" category="Programming" />
-          <SkillCard title="Next.js Development" provider="Ali Ahmed" category="Programming" />
-          <SkillCard title="Graphic Designing" provider="Sara Khan" category="Design" />
-          <SkillCard title="web development" provider="Saqib Ali" category="Design" />
-          <SkillCard title="digital marketing" provider="Mueen Khan" category="Language" />
-          <SkillCard title="Cybersecurity" provider="Shahzaib Malik" category="Language" />
-          {/* ... baki cards ... */}
+    <div className="min-h-screen bg-gray-50 font-sans">
+      {/* Navbar */}
+      <nav className="flex justify-between items-center p-6 bg-white shadow-sm">
+        <div className="text-2xl font-bold text-blue-600">SkillExchange</div>
+        <div className="space-x-6 hidden md:flex">
+          <a href="#" className="hover:text-blue-600">Find Skills</a>
+          <a href="#" className="hover:text-blue-600">Offer Skills</a>
+          <a href="#" className="hover:text-blue-600">How it Works</a>
         </div>
+        <button className="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium">Sign In</button>
+      </nav>
 
-      </div>
-    </main>
+      {/* Hero Section */}
+      <section className="py-20 px-6 text-center bg-gradient-to-b from-white to-blue-50">
+        <h1 className="text-5xl font-extrabold text-gray-900 mb-6">
+          Unlock Your Potential, <br /> <span className="text-blue-600">Share Your Skills</span>
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Connect with a community of learners. Learn new skills, teach what you know, and grow together.
+        </p>
+        <div className="flex justify-center gap-4">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-semibold shadow-lg hover:bg-blue-700">Find Skills</button>
+          <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-md text-lg font-semibold hover:bg-blue-50">Offer Your Skills</button>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 grid md:grid-cols-3 gap-8 px-10">
+        <div className="bg-white p-8 rounded-xl shadow-sm border text-center">
+          <div className="text-4xl mb-4">💡</div>
+          <h3 className="text-xl font-bold mb-2">Learn Anything</h3>
+          <p className="text-gray-500">Access thousands of skills from experts in your community.</p>
+        </div>
+        <div className="bg-white p-8 rounded-xl shadow-sm border text-center">
+          <div className="text-4xl mb-4">🤝</div>
+          <h3 className="text-xl font-bold mb-2">Collaborate</h3>
+          <p className="text-gray-500">Teach what you love and build meaningful connections.</p>
+        </div>
+        <div className="bg-white p-8 rounded-xl shadow-sm border text-center">
+          <div className="text-4xl mb-4">🚀</div>
+          <h3 className="text-xl font-bold mb-2">Grow Network</h3>
+          <p className="text-gray-500">Join a global network of passionate creators and learners.</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-12 text-center">
+        <h2 className="text-3xl font-bold mb-6">Join Thousands of Skill-Sharers Today!</h2>
+        <button className="bg-blue-500 hover:bg-blue-400 px-10 py-3 rounded-full text-lg font-bold transition">Sign Up For Free</button>
+        <div className="mt-10 text-gray-400 border-t border-gray-800 pt-6">
+          © 2026 Community Skill Exchange. All rights reserved.
+        </div>
+      </footer>
+    </div>
   );
 }
