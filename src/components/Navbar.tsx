@@ -16,21 +16,31 @@ export default function Navbar() {
           <Link href="/about" className="hover:text-blue-600 transition cursor-pointer">About Us</Link>
         </li>
 
-        {/* Naya Link: Offer a Skill form ke liye */}
         <li>
           <Link href="/add-skill" className="hover:text-blue-600 transition cursor-pointer">
             Offer a Skill
           </Link>
         </li>
         
-        <li className="hover:text-blue-600 transition cursor-pointer">Find Skills</li>
+        <li>
+          <Link href="/skills" className="hover:text-blue-600 transition cursor-pointer">
+            Find Skills
+          </Link>
+        </li>
       </ul>
 
-      <Link href="/login">
-        <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-sm active:scale-95">
+      {/* Login aur Signup ka group */}
+      <div className="flex items-center gap-4">
+        <Link href="/login" className="text-gray-700 font-semibold hover:text-blue-600 transition">
           Login
-        </button>
-      </Link>
+        </Link>
+
+        <Link href="/signup">
+          <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-sm active:scale-95">
+            Sign Up
+          </button>
+        </Link>
+      </div>
     </nav>
   );
 }
