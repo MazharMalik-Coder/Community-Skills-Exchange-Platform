@@ -17,9 +17,11 @@ export default function Navbar() {
         <li className="hover:text-blue-600 cursor-pointer">Find Skills</li>
       </ul>
 
-      <button className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
-        Login
-      </button>
+      <Link href="/login">
+        <button className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
+          Login
+        </button>
+      </Link>
     </nav>
   );
 }
